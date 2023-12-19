@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">NavoMobility</string>
+    <string name="prolog">Welcome to Navo Mobility! Discover unforgettable adventures with our transportation recommendations.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="login">Welcome Back!</string>
+    <string name="register">Create an Account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="initial_text_1">Don’t have an account yet?</string>
+    <string name="link_text_1"> Sign up here</string>
+    <string name="initial_text_2">Already have an account?</string>
+    <string name="link_text_2"> Login</string>
+    <string name="register_button">REGISTER</string>
+    <string name="login_button">LOGIN</string>
+    <string name="or">or</string>
+    <string name="back">Back</string>
+    <string name="web_client_id">267166101682–98lk70kahlg11s0egfae3d3tp6k1gemk.apps.googleusercontent.com</string>
+    <string name="question">What places do you often visit?</string>
+    <string name="taman_hiburan">Taman Hiburan</string>
+    <string name="cagar_budaya">Cagar Budaya</string>
+    <string name="wisata_bahari">Wisata Bahari</string>
+    <string name="cagar_alam">Cagar Alam</string>
+    <string name="tempat_ibadah">Tempat Ibadah</string>
+    <string name="question_button">Let\'s Travel!</string>
+    <string name="logout">Logout</string>
+</resources>

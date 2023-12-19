@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="App.Starting.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#2D59BB</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="android:delay">3000</item>
+        <item name="postSplashScreenTheme">@style/Theme.NavoMobility</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782306347950",
+    "project_id": "navo-app",
+    "storage_bucket": "navo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782306347950:android:85084228aee5cbbac5963f",
+        "android_client_info": {
+          "package_name": "com.bangkit.navomobility"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHo1Y5-AoF5H7mi0LP-QxrU01zuUCOybU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
