@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.JalanScreen.JalanScreen
-import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.historyscreen.HistoryScreen
+import com.bangkit.navomobility.ui.screen.historyscreen.HistoryScreen
 import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.homescreen.HomeScreen
 import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.profile.ProfileScreen
 import com.bangkit.navomobility.ui.screen.register.RegisterViewModel

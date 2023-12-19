@@ -1,4 +1,4 @@
-package com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.historyscreen
+package com.bangkit.navomobility.ui.screen.historyscreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
