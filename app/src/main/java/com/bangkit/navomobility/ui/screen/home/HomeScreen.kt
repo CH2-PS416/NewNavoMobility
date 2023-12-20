@@ -1,4 +1,4 @@
-package com.bangkit.navomobility.ui.screen.homescreen
+package com.bangkit.navomobility.ui.screen.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
