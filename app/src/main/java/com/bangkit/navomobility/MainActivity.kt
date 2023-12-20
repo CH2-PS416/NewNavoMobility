@@ -8,8 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.MainScreen
-import com.bangkit.navomobility.ui.theme.BottomNavBarDemoTheme
+import com.bangkit.navomobility.ui.screen.MainScreen
 import com.bangkit.navomobility.ui.theme.NavoMobilityTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +24,6 @@ class MainActivity : ComponentActivity() {
                     NavoMobilityApp()
                 }
 
-                    MainScreen()
                 }
 
             }

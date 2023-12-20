@@ -1,4 +1,4 @@
-package com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.JalanScreen
+package com.bangkit.navomobility.ui.screen.track
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun JalanScreen() {
+fun Track() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -33,5 +33,5 @@ fun JalanScreen() {
 @Composable
 @Preview
 fun JalanScreenPreview() {
-    JalanScreen()
+    Track()
 }

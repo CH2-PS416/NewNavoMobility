@@ -1,4 +1,4 @@
-package com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.homescreen
+package com.bangkit.navomobility.ui.screen.homescreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

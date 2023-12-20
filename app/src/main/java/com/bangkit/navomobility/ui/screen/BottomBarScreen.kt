@@ -1,11 +1,5 @@
-package com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen
+package com.bangkit.navomobility.ui.screen
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddLocationAlt
-import androidx.compose.material.icons.filled.History
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.ui.graphics.vector.ImageVector
 import com.bangkit.navomobility.R
 
 sealed class BottomBarScreen(

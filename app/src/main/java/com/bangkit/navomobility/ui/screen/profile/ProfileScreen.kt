@@ -1,4 +1,4 @@
-package com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.profile
+package com.bangkit.navomobility.ui.screen.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

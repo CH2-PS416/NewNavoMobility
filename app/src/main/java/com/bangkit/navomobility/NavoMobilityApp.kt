@@ -7,7 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.bangkit.navomobility.ui.navigation.NavoMobilityAppRouter
 import com.bangkit.navomobility.ui.navigation.Screen
-import com.bangkit.navomobility.ui.screen.ViewFeature.trackscreen.homescreen.HomeScreen
+import com.bangkit.navomobility.ui.screen.MainScreen
+import com.bangkit.navomobility.ui.screen.homescreen.HomeScreen
 import com.bangkit.navomobility.ui.screen.login.LoginScreen
 import com.bangkit.navomobility.ui.screen.login.LoginViewModel
 import com.bangkit.navomobility.ui.screen.onboarding.OnBoardingScreen
@@ -47,7 +48,7 @@ fun NavoMobilityApp() {
                 }
 
                 is Screen.HomeScreen -> {
-                    HomeScreen()
+                    MainScreen()
                 }
 
                 is Screen.QuestionnaireScreen -> {
