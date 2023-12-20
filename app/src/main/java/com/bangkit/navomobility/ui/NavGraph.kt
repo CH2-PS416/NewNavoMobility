@@ -51,7 +51,7 @@ fun NavGraph(
                 navArgument(PLACE_DETAIL_ID) { type = NavType.StringType }
             )
         ) {
-            PlaceDetailsScreen(
+            PlaceDetailsScreen(//
                 navBack = { navController.navigateUp() },
                 navigateToBookmark = { navController.navigate(HomeTabs.BOOKMARK.route) },
                 modifier = modifier
