@@ -10,6 +10,8 @@ sealed class Screen() {
     object ProfileScreen : Screen()
     object HomeScreen : Screen()
     object QuestionnaireScreen : Screen()
+
+    object EditProfileScreen : Screen()
 }
 
 object NavoMobilityAppRouter {

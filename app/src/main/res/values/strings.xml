@@ -27,4 +27,12 @@
     <string name="tempat_ibadah">Tempat Ibadah</string>
     <string name="question_button">Let\'s Travel!</string>
     <string name="logout">Logout</string>
+    <string name="user_name">Navo Mobility</string>
+    <string name="biodata">Bio-Data</string>
+    <string name="user_email">test@gmail.com</string>
+    <string name="user_phone">081234567812</string>
+    <string name="user_password">*********</string>
+    <string name="theme">Theme</string>
+    <string name="theme_detail">Manage your device theme</string>
+    <string name="logout_detail">Further secure your account for safety</string>
 </resources>

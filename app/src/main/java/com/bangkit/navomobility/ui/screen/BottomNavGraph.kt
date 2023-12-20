@@ -1,6 +1,10 @@
 package com.bangkit.navomobility.ui.screen
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,6 +16,7 @@ import com.bangkit.navomobility.ui.screen.register.RegisterViewModel
 
 @Composable
 fun BottomNavGraph (navController: NavHostController){
+    var darkTheme by remember { mutableStateOf(false) }
     NavHost(
         navController = navController,
         startDestination = BottomBarScreen.Home.route
@@ -30,7 +35,9 @@ fun BottomNavGraph (navController: NavHostController){
 
         composable(route = BottomBarScreen.Profile.route){
             ProfileScreen(
-                registerViewModel = RegisterViewModel()
+                registerViewModel = RegisterViewModel(),
+                darkTheme = darkTheme,
+                onThemeUpdated = { darkTheme = !darkTheme }
             )
         }
 

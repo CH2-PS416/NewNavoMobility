@@ -4,6 +4,10 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.bangkit.navomobility.ui.navigation.NavoMobilityAppRouter
 import com.bangkit.navomobility.ui.navigation.Screen
@@ -11,6 +15,8 @@ import com.bangkit.navomobility.ui.screen.MainScreen
 import com.bangkit.navomobility.ui.screen.login.LoginScreen
 import com.bangkit.navomobility.ui.screen.login.LoginViewModel
 import com.bangkit.navomobility.ui.screen.onboarding.OnBoardingScreen
+import com.bangkit.navomobility.ui.screen.profile.EditProfileScreen
+import com.bangkit.navomobility.ui.screen.profile.ProfileScreen
 import com.bangkit.navomobility.ui.screen.questionnaire.QuestionnaireScreen
 import com.bangkit.navomobility.ui.screen.questionnaire.QuestionnaireViewModel
 import com.bangkit.navomobility.ui.screen.register.RegisterScreen
@@ -21,6 +27,7 @@ fun NavoMobilityApp() {
     Surface(
         modifier = Modifier.fillMaxSize(),
     ) {
+        var darkTheme by remember { mutableStateOf(false) }
         Crossfade(
             targetState = NavoMobilityAppRouter.currentScreen,
             label = ""
@@ -59,7 +66,19 @@ fun NavoMobilityApp() {
                     )
                 }
 
-                else -> {}
+                is Screen.ProfileScreen -> {
+                    ProfileScreen(
+                        registerViewModel = RegisterViewModel(),
+                        darkTheme = darkTheme,
+                        onThemeUpdated = { darkTheme = !darkTheme }
+                    )
+                }
+
+                is Screen.EditProfileScreen -> {
+                    EditProfileScreen(
+                        onBackClick = {NavoMobilityAppRouter.navigateTo(Screen.ProfileScreen)}
+                    )
+                }
             }
         }
     }
