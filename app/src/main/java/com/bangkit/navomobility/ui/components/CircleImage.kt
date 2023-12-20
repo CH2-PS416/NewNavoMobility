@@ -14,7 +14,7 @@ import com.bangkit.navomobility.R
 
 @Composable
 fun CircleImage() {
-    val painter = painterResource(R.drawable.profile_image)
+    val painter = painterResource(R.drawable.profile_picture)
 
     Card (
         shape = CircleShape,
