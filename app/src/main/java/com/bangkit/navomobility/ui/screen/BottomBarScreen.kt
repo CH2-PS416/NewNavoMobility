@@ -12,28 +12,28 @@ sealed class BottomBarScreen(
     object Home : BottomBarScreen(
         route = "home",
         title = "Home",
-        icon = R.drawable.ic_bottom_home,
-        icon_focused = R.drawable.ic_bottom_home_focused
+        icon = R.drawable.ic_home,
+        icon_focused = R.drawable.ic_home_focused
     )
 
     object Jalan : BottomBarScreen(
         route = "jalan",
         title = "Jalan",
-        icon = R.drawable.ic_bottom_report,
-        icon_focused = R.drawable.ic_bottom_report_focused
+        icon = R.drawable.ic_track,
+        icon_focused = R.drawable.ic_track_focused
     )
 
     object History : BottomBarScreen(
         route = "history",
         title = "History",
-        icon = R.drawable.ic_bottom_profile,
-        icon_focused = R.drawable.ic_bottom_profile_focused
+        icon = R.drawable.ic_history,
+        icon_focused = R.drawable.ic_history_focused
     )
 
     object Profile : BottomBarScreen(
         route = "profile",
         title = "Profile",
-        icon = R.drawable.ic_bottom_profile,
-        icon_focused = R.drawable.ic_bottom_profile_focused
+        icon = R.drawable.ic_profile,
+        icon_focused = R.drawable.ic_profile_focused
     )
 }
