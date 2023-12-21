@@ -100,4 +100,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:$")
 
     implementation("androidx.compose.material:material:1.6.0-beta03@aar")
+    implementation ("com.google.android.gms:play-services-maps:17.0.1")
+
 }

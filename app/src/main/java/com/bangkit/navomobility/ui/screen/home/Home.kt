@@ -43,6 +43,7 @@ fun NavGraphBuilder.addHomeGraph(
             navToPlaceDetail = navToPlaceDetail,
             navToSearch = { navController.navigate(HomeTabs.SEARCH.route) },
             navToProfile = { navController.navigate(HomeTabs.PROFILE.route) },
+            navToMapsActivity ={},
             modifier = modifier
         )
     }

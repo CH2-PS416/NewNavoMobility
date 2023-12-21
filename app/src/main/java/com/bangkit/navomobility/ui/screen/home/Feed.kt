@@ -28,6 +28,7 @@ import com.bangkit.navomobility.ui.theme.NavoMobilityTheme
 
 @Composable
 fun Feed(
+    navToMapsActivity: () -> Unit,
     navToPlaceDetail: () -> Unit,
     navToProfile: () -> Unit,
     navToSearch: () -> Unit,
@@ -44,7 +45,7 @@ fun Feed(
         CategorySection()
         SearchSection(navToSearch)
         PopularPlace(navToPlaceDetail)
-        RecommendedSection()
+        RecommendedSection(navToMapsActivity)
     }
 }
 
@@ -129,7 +130,7 @@ fun SearchSection(navToSearch: () -> Unit) {
                     .aspectRatio(1f)
             ) {
                 Icon(
-                    Icons.Rounded.FilterList,
+                    Icons.Rounded.Mic,
                     contentDescription = null,
                     tint = MaterialTheme.colors.primary
                 )
@@ -172,9 +173,9 @@ fun PopularPlace(navPlaceDetail: () -> Unit) {
 }
 
 @Composable
-fun RecommendedSection() {
+fun RecommendedSection(navToMapsActivity: () -> Unit) {
     Column {
-        Title(text = "Recommended")
+        Title(text = "Maps")
         Image(
             painter = painterResource(id = R.drawable.landscape03),
             contentDescription = null,
@@ -183,10 +184,15 @@ fun RecommendedSection() {
                 .fillMaxWidth()
                 .height(150.dp)
                 .clip(MaterialTheme.shapes.medium)
+                .clickable {
+                    // Navigasi ke halaman yang diinginkan saat gambar diklik
+                    navToMapsActivity()
+                }
         )
-
     }
 }
+
+
 
 @Composable
 fun TravelAppTopBar(navToAccount: () -> Unit) {
@@ -199,7 +205,7 @@ fun TravelAppTopBar(navToAccount: () -> Unit) {
             Icon(Icons.Rounded.Menu, contentDescription = null)
         }
 
-        TextLocation(location = "France", big = true)
+        TextLocation(location = "Surabaya", big = true)
 
         IconButton(onClick = navToAccount) {
             Image(
@@ -253,7 +259,8 @@ fun FeedPreview() {
             Feed(
                 navToSearch = {},
                 navToProfile = {},
-                navToPlaceDetail = {}
+                navToPlaceDetail = {},
+                navToMapsActivity={}
             )
         }
     }
