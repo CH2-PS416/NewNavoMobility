@@ -191,7 +191,7 @@ fun BookNow() {
                 ),
                 modifier = Modifier.weight(0.6f)
             ) {
-                Text(text = "Book Now")
+                Text(text = "Lets Travel")
             }
         }
     }
