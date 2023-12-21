@@ -89,82 +89,85 @@ fun ProfileScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .heightIn(80.dp)
-                    .background(Color.White)
                     .border(
                         BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
                         shape = RoundedCornerShape(16.dp)
                     )
             ){
-                Column (
-                    modifier = Modifier
-                        .padding(8.dp)
+                Surface(
+                    color = Color.White
                 ){
-                    Row (
+                    Column (
                         modifier = Modifier
-                            .padding(8.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                            .padding(8.dp)
                     ){
-                        Icon(
-                            painter = painterResource(id = R.drawable.ic_theme),
-                            contentDescription = null
-                        )
-                        Spacer(modifier = Modifier.padding(8.dp))
-                        Column {
-                            Text(
-                                text = stringResource(id = R.string.theme),
-                                color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                textAlign = TextAlign.Left,
-                                style = MaterialTheme.typography.titleMedium
+                        Row (
+                            modifier = Modifier
+                                .padding(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ){
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_theme),
+                                contentDescription = null
                             )
-                            Text(
-                                text = stringResource(id = R.string.theme_detail),
-                                color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                textAlign = TextAlign.Left,
-                                style = MaterialTheme.typography.bodySmall
-                            )
+                            Spacer(modifier = Modifier.padding(8.dp))
+                            Column {
+                                Text(
+                                    text = stringResource(id = R.string.theme),
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    textAlign = TextAlign.Left,
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.theme_detail),
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    textAlign = TextAlign.Left,
+                                    style = MaterialTheme.typography.bodySmall
+                                )
 
-                        }
-                        Spacer(modifier = Modifier.weight(1f))
-                        ThemeSwitcher (
-                            darkTheme = darkTheme,
-                            size = 24.dp,
-                            padding = 5.dp,
-                            onClick = onThemeUpdated
-                        )
-                    }
-                    Spacer(modifier = Modifier.padding(4.dp))
-                    Row (
-                        modifier = Modifier
-                            .padding(8.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ){
-                        Icon(
-                            painter = painterResource(id = R.drawable.ic_logout),
-                            contentDescription = null
-                        )
-                        Spacer(modifier = Modifier.padding(8.dp))
-                        Column {
-                            Text(
-                                text = stringResource(id = R.string.logout),
-                                color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                textAlign = TextAlign.Left,
-                                style = MaterialTheme.typography.titleMedium
-                            )
-                            Text(
-                                text = stringResource(id = R.string.logout_detail),
-                                color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                textAlign = TextAlign.Left,
-                                style = MaterialTheme.typography.bodySmall
-                            )
-                        }
-                        Spacer(modifier = Modifier.weight(1f))
-                        Icon(
-                            painter = painterResource(id = R.drawable.ic_forward),
-                            contentDescription = null,
-                            modifier = Modifier.clickable {
-                                registerViewModel.logout()
                             }
-                        )
+                            Spacer(modifier = Modifier.weight(1f))
+                            ThemeSwitcher (
+                                darkTheme = darkTheme,
+                                size = 24.dp,
+                                padding = 5.dp,
+                                onClick = onThemeUpdated
+                            )
+                        }
+                        Spacer(modifier = Modifier.padding(4.dp))
+                        Row (
+                            modifier = Modifier
+                                .padding(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ){
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_logout),
+                                contentDescription = null
+                            )
+                            Spacer(modifier = Modifier.padding(8.dp))
+                            Column {
+                                Text(
+                                    text = stringResource(id = R.string.logout),
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    textAlign = TextAlign.Left,
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.logout_detail),
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                    textAlign = TextAlign.Left,
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            }
+                            Spacer(modifier = Modifier.weight(1f))
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_forward),
+                                contentDescription = null,
+                                modifier = Modifier.clickable {
+                                    registerViewModel.logout()
+                                }
+                            )
+                        }
                     }
                 }
             }
