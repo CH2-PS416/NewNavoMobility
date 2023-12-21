@@ -1,37 +1,33 @@
 package com.bangkit.navomobility.ui.screen.track
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.dp
+import com.bangkit.navomobility.ui.components.TrackCard
 
 @Composable
 fun Track() {
-    Box(
+    Column (
         modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Magenta),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "JALAN",
-            fontSize = 24.sp, // Ganti dengan ukuran yang diinginkan
-            fontWeight = FontWeight.Bold,
-            color = Color.White
+            .padding(16.dp)
+    ){
+        TrackCard(
+            tujuan = "Jakarta",
+            asal = "Semarang",
+            jam_berangkat = "08.00",
+            jam_sampai = "11.00",
+            jarak = "27 km",
+            status = "On Going"
         )
-
     }
 }
 
 @Composable
-@Preview
+@Preview(showBackground = true, device = Devices.PIXEL_4)
 fun JalanScreenPreview() {
     Track()
 }
