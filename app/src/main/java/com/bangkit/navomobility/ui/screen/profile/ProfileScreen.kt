@@ -89,85 +89,82 @@ fun ProfileScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .heightIn(80.dp)
+                    .background(Color.White)
                     .border(
                         BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
                         shape = RoundedCornerShape(16.dp)
                     )
             ){
-                Surface(
-                    color = Color.White
+                Column (
+                    modifier = Modifier
+                        .padding(8.dp)
                 ){
-                    Column (
+                    Row (
                         modifier = Modifier
-                            .padding(8.dp)
+                            .padding(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ){
-                        Row (
-                            modifier = Modifier
-                                .padding(8.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ){
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_theme),
-                                contentDescription = null
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_theme),
+                            contentDescription = null
+                        )
+                        Spacer(modifier = Modifier.padding(8.dp))
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.theme),
+                                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                textAlign = TextAlign.Left,
+                                style = MaterialTheme.typography.titleMedium
                             )
-                            Spacer(modifier = Modifier.padding(8.dp))
-                            Column {
-                                Text(
-                                    text = stringResource(id = R.string.theme),
-                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    textAlign = TextAlign.Left,
-                                    style = MaterialTheme.typography.titleMedium
-                                )
-                                Text(
-                                    text = stringResource(id = R.string.theme_detail),
-                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    textAlign = TextAlign.Left,
-                                    style = MaterialTheme.typography.bodySmall
-                                )
+                            Text(
+                                text = stringResource(id = R.string.theme_detail),
+                                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                textAlign = TextAlign.Left,
+                                style = MaterialTheme.typography.bodySmall
+                            )
 
-                            }
-                            Spacer(modifier = Modifier.weight(1f))
-                            ThemeSwitcher (
-                                darkTheme = darkTheme,
-                                size = 24.dp,
-                                padding = 5.dp,
-                                onClick = onThemeUpdated
+                        }
+                        Spacer(modifier = Modifier.weight(1f))
+                        ThemeSwitcher (
+                            darkTheme = darkTheme,
+                            size = 24.dp,
+                            padding = 5.dp,
+                            onClick = onThemeUpdated
+                        )
+                    }
+                    Spacer(modifier = Modifier.padding(4.dp))
+                    Row (
+                        modifier = Modifier
+                            .padding(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ){
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_logout),
+                            contentDescription = null
+                        )
+                        Spacer(modifier = Modifier.padding(8.dp))
+                        Column {
+                            Text(
+                                text = stringResource(id = R.string.logout),
+                                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                textAlign = TextAlign.Left,
+                                style = MaterialTheme.typography.titleMedium
+                            )
+                            Text(
+                                text = stringResource(id = R.string.logout_detail),
+                                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                textAlign = TextAlign.Left,
+                                style = MaterialTheme.typography.bodySmall
                             )
                         }
-                        Spacer(modifier = Modifier.padding(4.dp))
-                        Row (
-                            modifier = Modifier
-                                .padding(8.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ){
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_logout),
-                                contentDescription = null
-                            )
-                            Spacer(modifier = Modifier.padding(8.dp))
-                            Column {
-                                Text(
-                                    text = stringResource(id = R.string.logout),
-                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    textAlign = TextAlign.Left,
-                                    style = MaterialTheme.typography.titleMedium
-                                )
-                                Text(
-                                    text = stringResource(id = R.string.logout_detail),
-                                    color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    textAlign = TextAlign.Left,
-                                    style = MaterialTheme.typography.bodySmall
-                                )
+                        Spacer(modifier = Modifier.weight(1f))
+                        Icon(
+                            painter = painterResource(id = R.drawable.ic_forward),
+                            contentDescription = null,
+                            modifier = Modifier.clickable {
+                                registerViewModel.logout()
                             }
-                            Spacer(modifier = Modifier.weight(1f))
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_forward),
-                                contentDescription = null,
-                                modifier = Modifier.clickable {
-                                    registerViewModel.logout()
-                                }
-                            )
-                        }
+                        )
                     }
                 }
             }
